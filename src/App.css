@@ -279,6 +279,7 @@ input::placeholder {
     white-space: wrap;
     color: #860280;
     margin: 1em;
+    font-size: larger;
 }
 
 .task-buttons{
