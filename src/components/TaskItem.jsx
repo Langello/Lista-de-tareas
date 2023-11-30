@@ -17,10 +17,12 @@ const TaskItem = ({ task, handleComplete, handleDelete }) => {
     return (
         <li style={{ textDecoration: completed ? 'line-through' : 'none' }}>
             {task.name}
-            <button onClick={toggleCompleted}>
-                {completed ? 'Deshacer' : 'Completar'}
-            </button>
-            <button onClick={deleteTask}>Eliminar</button>
+            <div>
+                <button className='button-completar' onClick={toggleCompleted}>
+                    {completed ? 'Deshacer' : 'Completar'}
+                </button>
+                <button className='button-eliminar' onClick={deleteTask}>Eliminar</button>
+            </div>
         </li>
     );
 };

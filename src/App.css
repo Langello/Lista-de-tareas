@@ -1,0 +1,179 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(246, 245, 248, 0.575);
+    width: 50%;
+    margin: 0 auto;
+    min-height: 600px;
+}
+
+body {
+    background-color: rgba(205, 175, 230, 0.493);
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: rgb(247, 206, 255);
+    border-radius: 15px;
+}
+
+li {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    font-size: 18px;
+    font-family: "Times New Roman", Times, serif;
+    color: black;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+.button-agregar {
+    font-size: 16px;
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    will-change: box-shadow, transform;
+    background: rgb(131, 58, 180);
+    background: linear-gradient(90deg,
+            rgba(131, 58, 180, 1) 0%,
+            rgb(245, 29, 253) 50%,
+            rgb(252, 69, 109) 100%);
+    box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%),
+        0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%),
+        inset 0px -0.01em 0px rgb(58 65 111 / 50%);
+    padding: 0 2em;
+    border-radius: 15px;
+    color: #fff;
+    height: 2.6em;
+    text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.button-agregar:hover {
+    box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%),
+        0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%),
+        inset 0px -0.1em 0px rgba(111, 58, 58, 0.5);
+    transform: translateY(-0.1em);
+}
+
+.button-agregar {
+    box-shadow: inset 0px 0.1em 0.6em #c53ce0;
+    transform: translateY(0em);
+}
+
+.button-eliminar {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button-completar {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+input {
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 1em;
+    background-color: rgb(247, 206, 255);
+    box-shadow: inset 2px 5px 10px rgba(213, 1, 255, 0.3);
+    transition: 300ms ease-in-out;
+    font-size: 16px;
+    color: #860280;
+    margin-top: 10px;
+    width: 500px;
+}
+
+input:focus {
+    background-color: rgb(247, 206, 255);
+    transform: scale(1.05);
+    box-shadow: 13px 13px 100px #9e04a3, -13px -13px 100px #ffffff;
+}
+
+input::placeholder {
+    color: #86027f98; 
+}
+
+.task-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-wrapper {
+    margin-bottom: 1em;
+}
+
+/* === removing default button style ===*/
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+}
+
+/* button styling */
+.button {
+    --border-right: 6px;
+    --text-stroke-color: rgba(240, 11, 190, 0.986);
+    --animation-color: #ff37f5;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+/* this is the text, when you hover on button */
+.hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+}
+
+/* hover */
+.button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+}

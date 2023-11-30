@@ -14,15 +14,23 @@ const TaskForm = ({ addTask }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input
-                type="text"
-                value={taskName}
-                onChange={(e) => setTaskName(e.target.value)}
-                placeholder="Nueva tarea..."
-            />
-            <button type="submit">Agregar</button>
-        </form>
+        <>
+            <button className="button" data-text="Awesome">
+                <span className="actual-text">&nbsp;Lista&nbsp;de&nbsp;Tareas&nbsp;</span>
+                <span aria-hidden="true" className="hover-text">&nbsp;Lista&nbsp;de&nbsp;Tareas&nbsp;</span>
+            </button>
+            <form onSubmit={handleSubmit} className='task-form'>
+                <div className='input-wrapper'>
+                    <input
+                        type="text"
+                        value={taskName}
+                        onChange={(e) => setTaskName(e.target.value)}
+                        placeholder='Hacer el trabajo integrador....'
+                    />
+                </div>
+                <button className='button-agregar' type="submit">Agregar</button>
+            </form>
+        </>
     );
 };
 

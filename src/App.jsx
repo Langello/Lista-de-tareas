@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import TaskList from './components/TaskList';
 import TaskForm from './components/TaskForm';
+import './App.css';
 
 const App = () => {
   const [tasks, setTasks] = useState([]);
@@ -46,7 +47,7 @@ const App = () => {
   }, [tasks]);
 
   return (
-    <div>
+    <div className='container'>
       <TaskForm addTask={addTask} />
       <TaskList
         tasks={tasks}
