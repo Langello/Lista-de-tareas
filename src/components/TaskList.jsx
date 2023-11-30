@@ -5,7 +5,7 @@ import TaskItem from './TaskItem';
 
 const TaskList = ({ tasks, handleComplete, handleDelete }) => {
     return (
-        <div>
+        <div className='task-list'>
             <ul>
                 {tasks.map(task => (
                     <TaskItem
